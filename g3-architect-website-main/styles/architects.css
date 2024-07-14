@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
-
+*{
+    margin: 0;
+    padding: 0;
+    border: border-box;
+}
 .work-sans-font {
   font-family: "Work Sans", sans-serif;
   font-optical-sizing: auto;
@@ -12,7 +16,9 @@
 .display-flex{
     display: flex;
 }
-
+.text-primary{
+    color: #FF900E;
+}
 /* dark 02 */
 .text-gray{
     color: #424242;
@@ -26,12 +32,34 @@
 .bg-light{
     background-color: rgba(255, 144, 14, 0.1);
 }
-
+/* btn style */
+.btn-primary{
+    background-color: #FF900E;
+    color: white;
+    padding: 20px 25px;
+    font-size: 1.25rem;
+    font-weight: 600;
+    border-radius: 8px;
+    border: none;
+}
+/* Main section */
+main{
+    max-width: 1440px;
+    margin: 0 auto;
+}
+main>section{
+    margin-top: 125px;
+}
 /* header styles */
 
 /* navbar related styles */
 .navbar{
     justify-content: space-between;
+    align-items: center;
+}
+.brand{
+    font-weight: 700;
+    font-size: 2.813rem;
 }
 
 .nav-item{
@@ -47,4 +75,58 @@
 .navbar, .banner{
     max-width: 1440px;
     margin: 0 auto;
+}
+/* Banner related styles */
+.banner-content{
+    max-width: 850px;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 50px;
+}
+.banner-title{
+    font-weight: 700;
+    font-size: 4rem;
+}
+.banner-img{
+    width: 100%;
+}
+/* teams and feature */
+.teams{
+    align-items: center;
+    gap: 73px;
+}
+.team-img-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+.our-features{
+    max-width: 530px;
+}
+.features-title{
+    font-size: 2.8rem;
+    font-weight: 700;
+}
+#quick-list{
+    font-weight: 500;
+}
+
+
+/* Responsive media query */
+@media screen and (max-width:576px){
+    .navbar,.nav-link ,.teams{
+        flex-direction: column;
+    }
+    .team-img-container{
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+/* for tablet */
+@media screen and (min-width: 576px) and (max-width: 992px){
+    .teams{
+        flex-direction: column;
+    }
+    .our-features{
+        margin: 50px auto;
+    }
 }
